@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Airplane</title>
+</head>
+<body>
+<script>
+class Airplane
+{
+constructor(name, occupancy, speed)
+{
+this.name = name;
+this.occupancy = occupancy;
+this.speed = speed;
+if (name = '')
+    {return "Name cannot be blank";}
+if (occupancy = '' && occupancy<0 && occupancy>180)
+    {return "Invalid occupancy";}
+if (speed = '' && speed<0 && speed>900)
+    {return "Invalid speed";}
+}
+status(name,occupancy,speed)
+    {
+     console.log ("Airplane: "+ name + " with " + occupancy + " occupancy, is moving at " + speed + " km/hr");
+    }
+}
+let a1 = new Airplane("Boeing 777" , 180 , 500);
+a1.status(a1.name,a1.occupancy,a1.speed);
+let a2 = new Airplane("Boeing 707" , 200 , 600);
+a2.status(a2.name,a2.occupancy,a2.speed);
+let a3 = new Airplane("Boeing 999" , 150 , 450);
+a3.status(a3.name,a3.occupancy,a3.speed);
+a1.speed = a1.speed + 200;
+a2.speed = a2.speed + 200;
+a3.speed = a3.speed + 200;
+console.log("Speed increased by 200 Km/Hr");
+a1.status(a1.name,a1.occupancy,a1.speed);
+a2.status(a2.name,a2.occupancy,a2.speed);
+a3.status(a3.name,a3.occupancy,a3.speed);
+</script>
+</body>
+</html>
